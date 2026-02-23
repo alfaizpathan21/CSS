@@ -16,7 +16,8 @@ body{
 	-moz-osx-font-smoothing: grayscale;
 	z-index: 1;
 }
-.Container{border: 2px solid #000;
+.Container{
+    
     width: 400px;
     height: 200px;
     display: grid;
