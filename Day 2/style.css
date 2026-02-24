@@ -1,0 +1,55 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --menu-icon-line-height: 8px;
+    --menu-icon-line-space: 14px;
+    --menu-icon-line-offsetY: 22px;
+    --menu-icon-height: 52px;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: #3FAF82;
+}
+
+/* Menu Box */
+.menu{
+    width: 80px;
+    height: var(--menu-icon-height);
+    cursor: pointer;
+}
+
+/* Lines */
+.menu .line-1,
+.menu .line-2,
+.menu .line-3{
+    height: var(--menu-icon-line-height);
+    width: 100%;
+    background: #fff;
+    border-radius: 4px;
+    transition: 0.4s;
+}
+
+.menu .line-2{
+    margin: var(--menu-icon-line-space) 0;
+}
+
+/* Active Animation */
+.menu.active .line-1{
+    transform: translateY(var(--menu-icon-line-offsetY)) rotate(45deg);
+}
+
+.menu.active .line-2{
+    opacity: 0;
+}
+
+.menu.active .line-3{
+    transform: translateY(calc(-1 * var(--menu-icon-line-offsetY))) rotate(135deg);
+}
